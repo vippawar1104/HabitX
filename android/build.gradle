@@ -1,0 +1,62 @@
+buildscript {
+    ext {
+        kotlin_version = '1.9.22'
+        gradle_version = '8.2.1'
+        agp_version = '8.2.2'
+    }
+    
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    
+    dependencies {
+        classpath "com.android.tools.build:gradle:${agp_version}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.buildDir = '../build'
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    
+    afterEvaluate {
+        if (project.hasProperty('android')) {
+            android {
+                compileSdkVersion 34
+                
+                defaultConfig {
+                    minSdkVersion 21
+                    targetSdkVersion 34
+                }
+                
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                
+                kotlinOptions {
+                    jvmTarget = '1.8'
+                }
+            }
+        }
+    }
+    
+    if (project.name != "app") {
+        project.evaluationDependsOn(":app")
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

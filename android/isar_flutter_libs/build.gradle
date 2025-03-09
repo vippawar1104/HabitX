@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    namespace "com.example.habitx.isar"
+    compileSdkVersion 33
+    
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 33
+    }
+}

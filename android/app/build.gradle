@@ -1,0 +1,81 @@
+plugins {
+   id "com.android.application"
+   id "kotlin-android" 
+   id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+   namespace "com.example.habitx"
+   compileSdkVersion flutter.compileSdkVersion
+   ndkVersion flutter.ndkVersion
+
+   compileOptions {
+       sourceCompatibility JavaVersion.VERSION_17
+       targetCompatibility JavaVersion.VERSION_17
+       coreLibraryDesugaringEnabled true
+   }
+
+   kotlinOptions {
+       jvmTarget = '17'
+   }
+
+   defaultConfig {
+       applicationId "com.example.habitx"
+       minSdkVersion flutter.minSdkVersion
+       targetSdkVersion flutter.targetSdkVersion
+       versionCode flutter.versionCode
+       versionName flutter.versionName
+       multiDexEnabled true
+
+       ndk {
+           abiFilters "armeabi-v7a", "arm64-v8a", "x86_64"
+       }
+   }
+
+   buildTypes {
+       release {
+           signingConfig signingConfigs.debug
+           minifyEnabled true
+           shrinkResources true
+           proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+           
+           // Add additional optimizations for release builds
+           ndk.debugSymbolLevel 'SYMBOL_TABLE'
+       }
+       debug {
+           minifyEnabled false
+           shrinkResources false
+       }
+   }
+
+   splits {
+       abi {
+           enable true
+           reset()
+           include "armeabi-v7a", "arm64-v8a", "x86_64"
+           universalApk true
+       }
+   }
+
+   // Add lint options to catch potential issues
+   lintOptions {
+       checkReleaseBuilds true
+       abortOnError false
+   }
+
+   // Enable R8 full mode for better optimization
+   buildFeatures {
+       buildConfig true
+   }
+}
+
+dependencies {
+   coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+   
+   // Add multidex support
+   implementation 'androidx.multidex:multidex:2.0.1'
+}
+
+flutter {
+   source '../..'
+}
