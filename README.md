@@ -1,6 +1,9 @@
 # 🏆 HabitX - Smart Habit Tracker
 
-![HabitX Icon](lib/images/icon.png)  
+<p align="center">
+  <img src="lib/HabitX.png" alt="HabitX Icon" width="150">
+</p>
+
 *Track your habits, achieve your goals!*  
 
 ## 🚀 Features
@@ -14,13 +17,15 @@
 
 ## 📸 Screenshots
 
-| Home Page | Heatmap | Challenges |
-|-----------|--------|------------|
-| ![Home](path/to/home_screen.png) | ![Heatmap](path/to/heatmap_screen.png) | ![Challenges](path/to/challenges_screen.png) |
+<p align="center">
+  <img src="path/to/home_screen.png" alt="Home Page" width="250">
+  <img src="path/to/heatmap_screen.png" alt="Heatmap" width="250">
+  <img src="path/to/challenges_screen.png" alt="Challenges" width="250">
+</p>
 
-| Statistics Page |
-|----------------|
-| ![Statistics](path/to/statistics_screen.png) |
+<p align="center">
+  <img src="path/to/statistics_screen.png" alt="Statistics Page" width="300">
+</p>
 
 ## 🎥 Demo Videos
 
