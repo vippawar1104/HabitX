@@ -18,13 +18,13 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="path/to/home_screen.png" alt="Home Page" width="250">
-  <img src="path/to/heatmap_screen.png" alt="Heatmap" width="250">
-  <img src="path/to/challenges_screen.png" alt="Challenges" width="250">
+  <img src="HomeScreen.png" alt="Home Page" width="250">
+  <img src="Heatmap.png" alt="Heatmap" width="250">
+  <img src="Challenges.png" alt="Challenges" width="250">
 </p>
 
 <p align="center">
-  <img src="path/to/statistics_screen.png" alt="Statistics Page" width="300">
+  <img src="Statistics.png" alt="Statistics Page" width="300">
 </p>
 
 ## 🎥 Demo Videos
