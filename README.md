@@ -29,8 +29,8 @@
 
 ## 🎥 Demo Videos
 
-- [Demo Video 1](path/to/demo_video1.mp4) - Overview of the app
-- [Demo Video 2](path/to/demo_video2.mp4) - Habit tracking & analytics
+- [Demo Video 1](https://youtube.com/shorts/pyBx8t9pRDo) - Overview of the app
+- [Demo Video 2](https://youtube.com/shorts/pyBx8t9pRDo) - Habit tracking & analytics
 
 ## 🛠️ Tech Stack
 
